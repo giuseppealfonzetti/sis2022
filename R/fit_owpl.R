@@ -221,6 +221,7 @@ fit_owpl <- function(
   
 }
 pmvnormM <- function(lower, upper, sigma, seed = 123){
+  require(mvtnorm)
   set.seed(seed)
   out <- pmvnorm(lower = lower, upper = upper, sigma = sigma, keepAttr = F)
   return(out)
